@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="content-section">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4" style="font-size: 50px;">Sell</legend>
+                            {{ form|crispy }}
+                        </fieldset>
+                        <div class='form-group'>
+                            <button class="btn btn-outline-info" type="submit">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div>
+                    <img class="buy-logo" src="{% static 'sell-logo.png' %}" width="330" height="330" alt=""
+                    style="margin-left: 100px; margin-top: 40px;">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

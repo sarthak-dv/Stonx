@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% if not api %}
+	<h1 class="homepage" style="margin: 15px;">Welcome to StonX!</h1>
+	<hr>
+	<br/>
+{% else %}
+	<h1 class="homepage" style="margin-bottom: 25px; margin-left: 15px;">Real-time data</h1>
+{% endif %}
+	<br/>
+	{% if api %}
+		{% if api == "Error..." %}
+			<div class="alert alert-danger" role="alert">
+				<strong>Error: </strong>{{ error }}
+			</div>
+			
+			There was a problem with the API or your ticker symbol, please try again...
+		
+		{% else %}
+			<div class="quote-block">
+				<div class="card bg-jade mb-3" style="max-width: 30rem;">
+					<div class="card-header mb-3" style="background-color: #b4d8b7;">
+						<h2 style="color: #014e3f; margin-top: 5px;">
+							<strong>Quote: {{ api.symbol }}</strong>
+						</h2>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title" style="color: #014e3f;">
+							{{ api.companyName }} <em>({{ api.symbol}})</em><br/> 
+						<p class="card-text">
+						<h5 style="color: #014e3f;"><strong>Price: ${{ api.latestPrice }}<br/><br/></h5></strong>
+						<b>Previous Close:</b> ${{ api.previousClose }}<br/>
+				
+						<b>Market Cap:</b> {{ api.marketCap }}<br/>
+						<b>Volume:</b> {{ api.latestVolume }}<br/>
+						<b>PE Ratio:</b> {{ api.peRatio }} </br></br>
+
+						<b>Percent Change:</b> {{ api.changePercent }}</br>	
+						<b>YTD Change:</b> {{ api.ytdChange }}<br/></br>
+
+						<b>52Wk High:</b> {{ api.week52High }}<br/>
+						<b>52Wk Low:</b> {{ api.week52Low }}<br/></br>
+
+						<b>Open:</b> ${{ api.open }}<br/>
+						<b>High:</b> ${{ api.high }}<br/>
+						<b>Low:</b> ${{ api.low }}<br/>
+						<b>Close:</b> ${{ api.close }}<br/></p>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% else %}
+	<p style="font-size: 18px;">
+		Enter a stock ticker in the search bar to view its real-time data.
+	</p>
+	<br>
+	<div class="homepage-content">
+		<img class="homepage-logo" src="{% static 'home-logo.png' %}" width="850" height="460" alt="" style="margin-left: auto; margin-right: auto; margin-bottom: 50px; display: block;">
+	</div>
+	{% endif %}
+{% endblock %}

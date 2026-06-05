@@ -1,0 +1,132 @@
+body {
+    background: #fafafa;
+    color: #333333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  ul {
+    margin: 5;
+  }
+  
+  .bg-aqua {
+    background-color: #00b38f;
+  }
+  
+  .bg-jade {
+    background-color: #CEE5D0;
+  }
+  
+  .text-green {
+    color: #006652;
+  }
+  
+  .text-grey{
+    color: #50756e;
+    font-size: 15px;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Lucida Sans Unicode;
+  }
+  
+  .collapse .navbar-nav .nav-link {
+    color: #f2f2f2;
+  }
+  
+  .collapse .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .collapse .btn {
+    background-color: #006652;
+    color: #ffffff;
+  }
+  
+  .collapse .btn:hover {
+    background-color: #014e3f;
+  }
+  
+  .card-body .btn {
+    background-color: #0aa082; 
+    color: #ffffff;
+  }
+  
+  .card-body .btn:hover {
+    background-color: #098068; 
+  }
+  
+  .add-ticker .btn {
+    background-color: #09997c; 
+    color: #ffffff;
+  }
+  
+  .add-ticker .btn:hover {
+    background-color: #06614f; 
+  }
+  
+  .contacts .inc img:hover {
+    transform: scale(1.25);
+  }
+  
+  .news-block .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+  }
+  
+  .news-block .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .quote-block .card {
+    color: #006652;
+  }
+  
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table .thead-green {
+    background-color: #8dc591;
+    color: white;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e1f1e2;
+  }
+  
+  .delete img {
+    vertical-align: top;
+  }
+  
+  .portfolio .card .card-text {
+    margin: 10px;
+  } 
+  
+  .dropdown-item {
+    margin-left: 0px;
+    color: #ffffff;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #00b38f;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #00b38f;
+    border-radius: 10px;
+    width: 400px;
+  }

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="news-block">
+		<h1 style="margin: 15px; margin-bottom: 25px;">Market News</h1>
+		<hr>
+		<br/>
+		
+		<div class="container">
+			<div class="card-columns">
+				{% for x in api.articles %}	
+					<div class="card text-green bg-jade mb-3" style="width: 20rem;">
+					<a href="{{ x.url }}" target="_blank"><img href="{{ x.url }}" src="{{ x.urlToImage }}" class="card-img-top" alt="{{ x.source.name }}" class="list-group-item"></a>
+					<div class="card-body">
+						<h5 class="card-title" style="color: #006652">{{ x.title }}</h5>
+						<p class="card-text">{{ x.description }}</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<em><li class="list-group-item text-grey bg-jade mb-3">{{ x.source.name }}</em>, {{ x.publishedAt }}, <strong>{{ x.author}}</strong></li>
+					</ul>
+					<div class="card-body" style="background-color: #b4d8b7;">
+						<a href="{{ x.url }}" class="btn" target="_blank">Read More...</a>
+					</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
