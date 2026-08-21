@@ -1,0 +1,10 @@
+# Reconstructed from the packages actually imported in the Stonx codebase —
+# the repo itself doesn't ship a requirements.txt.
+# Versions are pinned to a set known to work together with Django 3.2.
+
+Django==3.2.9
+channels==3.0.5
+channels-redis==3.4.1
+django-crispy-forms==1.14.0
+requests==2.31.0
+python-dotenv==1.0.0
