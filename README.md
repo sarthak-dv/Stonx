@@ -2,7 +2,6 @@
 
 Stonx is a Django web app for practicing stock trading without risking real money. Users look up quotes, keep a watchlist, "buy" and "sell" shares against a simulated portfolio, read market news, and chat with other users in real time.
 
-Repo: [github.com/sarthak-dv/Stonx](https://github.com/sarthak-dv/Stonx)
 
 ## Features
 
